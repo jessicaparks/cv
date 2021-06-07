@@ -1,0 +1,30 @@
+{
+  "name": "CV",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "eleventy --serve & postcss styles/tailwind.css --o _tmp/style.css --watch",
+    "build": "ELEVENTY_PRODUCTION=true eleventy & NODE_ENV=production postcss styles/tailwind.css --o _site/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessicaparks/jessicaparks.co.git/cv"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessicaparks/jessicaparks.co/issues"
+  },
+  "homepage": "https://github.com/jessicaparks.co/cv#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "liquidjs": "^6.4.3",
+    "material-ui-colors": "^1.0.0",
+    "postcss": "^8.1.10",
+    "postcss-cli": "^8.3.0",
+    "tailwindcss": "^1.9.6"
+  },
+  "description": ""
+}
