@@ -1,11 +1,11 @@
 ---
 author: Jessica Parks
-title: Data Scientist
+title: Data Engineer
 location: Durham NC
 tags: author
 ---
-Data Scientist with experience in genomics, data management, ETL,
-and data visualization. I've been developing in the AWS cloud
-ecosystem for 2 years and programming in Python for over 5 years.
+Data Engineer experienced in genomics, data management, ETL,
+serverless development, and data visualization. I've been developing
+in the AWS cloud for 4 years and Python for over 7 years.
 I use this expertise to engineer data platforms and provide
 reproducible insights from complex data.

@@ -1,16 +1,17 @@
 [
   {
+    "label": "AWS Solutions Architect - Associate",
+    "link": "https://www.credly.com/badges/219ff74a-5005-4b56-94aa-67614217b3a0/public_url",
+    "icon": "fab fa-aws fa-fw"
+  },
+  {
     "label": "AWS Developer - Associate",
-    "link": "https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=CREC0DVCCFB4Q8CE",
+    "link": "https://www.credly.com/badges/117f0140-94bd-472b-a806-0a35ae2c048c/public_url",
     "icon": "fab fa-aws fa-fw"
   },
   {
     "label": "AWS Cloud Practitioner",
-    "link": "https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=CREC0DVCCFB4Q8CE",
+    "link": "https://www.credly.com/badges/cf55db46-caad-4f4e-b32d-641b4145012d/public_url",
     "icon": "fab fa-aws fa-fw"
-  },
-  {
-    "label": "Coursera ML Specialization (in progress)",
-    "icon": "fas fa-infinity fa-fw"
   }
 ]
