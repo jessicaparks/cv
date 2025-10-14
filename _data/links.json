@@ -1,11 +1,5 @@
 [
   {
-    "name": "github",
-    "label": "github.com/jessicaparks",
-    "link": "https://github.com/jessicaparks",
-    "icon": "fab fa-github fa-fw"
-  },
-  {
     "name": "linkedin",
     "label": "linkedin.com/in/jessicalparks",
     "link": "https://www.linkedin.com/in/jessicalparks",
