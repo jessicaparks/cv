@@ -1,9 +1,9 @@
 ---
-date: 2023-02-10
+date: 2025-10-01
 tags: experience
 institute: ProFound Therapeutics
-position: SENIOR DATA ENGINEER
-begin: 2021
+position: PRINCIPAL DATA ENGINEER
+begin: 2024
 end: present
 notes: [
 ]
