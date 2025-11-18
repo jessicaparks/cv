@@ -3,12 +3,11 @@ date: 2012-01-01
 tags: experience
 institute: University of North Carolina at Chapel Hill
 position: UNDERGRADUATE RESEARCH ASSISTANT
+location: Chapel Hill, NC
 begin: 2011
 end: 2012
 notes: [
-  "Awarded UNC-HHMI Future Scientists and Clinicians Fellowship for two summers.",
-  "I performed a forward genetic screen to isolate multiple
-  chemically-induced mutations in C. elegans, and used SNP mapping
-  and WGS to identify the mutants."
+  "Awarded UNC-HHMI Future Scientists and Clinicians Fellowship for two consecutive summers.",
+  "Executed forward genetic screening protocol, isolating multiple C. elegans mutants and implementing SNP mapping with whole genome sequencing for mutation identification."
 ]
 ---

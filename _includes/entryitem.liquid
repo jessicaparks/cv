@@ -1,24 +1,47 @@
-<li class="entry py-1">
-  <div class="ml-1">
-    <div class="flex flex-row justify-between">
-      <div class="font-bold font-sans text-sm text-blueGrey-800">
+<li class="entry">
+  {% if institute.positions %}
+    <!-- Multiple positions layout -->
+    <div class="flex flex-row justify-between items-start mb-2">
+      <div class="flex flex-col">
+        {% for pos in institute.positions %}
+          <div class="{% unless forloop.first %}mt-1{% endunless %}">
+            <span class="font-semibold text-base text-gray-900">{{ pos.title }}</span>
+            <span class="text-gray-500 text-sm font-mono ml-2">({{ pos.dates }})</span>
+          </div>
+        {% endfor %}
+      </div>
+      {% if institute.begin == institute.end %}
+        <div class="text-gray-500 text-sm font-mono">{{ institute.begin }}</div>
+      {% else %}
+        <div class="text-gray-500 text-sm font-mono">{{ institute.begin }}&mdash;{{ institute.end }}</div>
+      {% endif %}
+    </div>
+  {% else %}
+    <!-- Single position layout -->
+    <div class="flex flex-row justify-between items-start mb-2">
+      <div class="font-semibold text-base text-gray-900">
         {{ institute.position }}
       </div>
       {% if institute.begin == institute.end %}
-        <div class="text-blueGrey-600 text-xs font-mono">{{ institute.begin }}</div>
+        <div class="text-gray-500 text-sm font-mono">{{ institute.begin }}</div>
       {% else %}
-        <div class="text-blueGrey-600 text-xs font-mono">{{ institute.begin }}&mdash;{{ institute.end }}</div>
+        <div class="text-gray-500 text-sm font-mono">{{ institute.begin }}&mdash;{{ institute.end }}</div>
       {% endif %}
     </div>
-    <div class="text-blueGrey-900 text-sm font-light">{{ institute.institute }}</div>
-    {% if notes %}
-      <div class="text-blueGrey-700 text-xs pl-5">
-      <ul style="list-style-type:disc">
-        {% for note in institute.notes %}
-          <li>{{ note }}</li>
-        {% endfor %}
-      </ul>
-      </div>
-    {% endif %}
+  {% endif %}
+  <div class="text-gray-700 mb-2">
+    <span class="font-medium">{{ institute.institute }}</span>{% if institute.location %} | {{ institute.location }}{% endif %}
   </div>
+  {% if notes %}
+    <div class="text-gray-700 text-sm">
+    <ul class="space-y-1 ml-4">
+      {% for note in institute.notes %}
+        <li class="flex items-start">
+          <span class="text-gray-800 mr-2">•</span>
+          <span>{{ note }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+    </div>
+  {% endif %}
 </li>

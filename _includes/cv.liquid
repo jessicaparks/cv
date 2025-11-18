@@ -1,31 +1,98 @@
 ---
 layout: base
 ---
-<div class="m-auto pl-4 body">
+<div class="m-auto p-4 body">
 {% for author in collections.author %}
 {% include header.liquid %}
 {% endfor %}
-  <div class="mt-4 mr-2 page1">
-    <section class="mx-1">
-      <div class="pb-2 border-blueGrey-200 border-b-2 flex flex-row justify-between items-center">
-        <h2 class="text-lg text-cyan-900 font-light font-mono">Experience</h2>
-        <i class="fas fa-laptop-code text-cyan-600"></i>
+
+  <!-- Technical Skills Section -->
+  <section class="mb-4">
+    <div class="flex flex-row items-center mb-4">
+      <h2 class="text-xl font-bold text-gray-700 mr-4">Technical Skills</h2>
+      <div class="flex-1 mr-4" style="border-bottom: 1px solid #9ca3af;"></div>
+      <i class="fas fa-code text-gray-800 text-lg"></i>
+    </div>
+    <div class="space-y-2">
+    {% for category in technologies %}
+      <div class="text-sm">
+        <span class="font-semibold text-gray-800">{{ category[0] }}:</span>
+        <span class="text-gray-700 ml-2">{{ category[1] }}</span>
       </div>
-      <div class="my-2">
-        <ul class="entrylist">
-        {% for exp in collections.experience reversed %}
-          {% assign institute = exp.data %}
-          {% assign notes = exp.templateContent %}
-          {% include entryitem.liquid %}
+    {% endfor %}
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="mb-4">
+    <div class="flex flex-row items-center mb-4">
+      <h2 class="text-xl font-bold text-gray-700 mr-4">Experience</h2>
+      <div class="flex-1 mr-4" style="border-bottom: 1px solid #9ca3af;"></div>
+      <i class="fas fa-briefcase text-gray-800 text-lg"></i>
+    </div>
+    <div>
+      <ul class="entrylist space-y-4">
+      {% for exp in collections.experience reversed %}
+        {% assign institute = exp.data %}
+        {% assign notes = exp.templateContent %}
+        {% include entryitem.liquid %}
+      {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Two Column Section: Education, Certifications -->
+  <section class="mb-4">
+    <div class="grid grid-cols-2 gap-6">
+      <!-- Education -->
+      <div>
+        <div class="flex flex-row items-center mb-4">
+          <h2 class="text-xl font-bold text-gray-700 mr-4">Education</h2>
+          <div class="flex-1 mr-4" style="border-bottom: 1px solid #9ca3af;"></div>
+          <i class="fas fa-graduation-cap text-gray-800 text-lg"></i>
+        </div>
+        <ul class="space-y-2 mt-2">
+        {% for educ in education %}
+          <li>
+            <div class="flex justify-between items-center">
+              <div class="font-semibold text-sm text-gray-900">
+                {{ educ.degree }}
+              </div>
+              <div class="text-gray-500 text-xs font-mono">
+                {{ educ.begin }}&mdash;{{ educ.end }}
+              </div>
+            </div>
+            <div class="text-sm text-gray-700">
+              {{ educ.field }}
+            </div>
+            <div class="text-gray-600 text-sm">
+              {{ educ.institute }}
+            </div>
+          </li>
         {% endfor %}
         </ul>
       </div>
-    </section>
-  </div>
-  {% include sidebar.liquid %}
-  <footer>
-    <div class="h-full flex flex-wrap justify-center content-end">
-      <div class="text-xs text-blueGrey-700 italic">updated on: {% version %}</div>
+      
+      <!-- Certifications -->
+      <div>
+        <div class="flex flex-row items-center mb-4">
+          <h2 class="text-xl font-bold text-gray-700 mr-4">Certifications</h2>
+          <div class="flex-1 mr-4" style="border-bottom: 1px solid #9ca3af;"></div>
+          <i class="fas fa-certificate text-gray-800 text-lg"></i>
+        </div>
+        <ul class="space-y-2 mt-2">
+        {% for cert in certifications %}
+          <li class="flex justify-between items-center">
+            <a {% if cert.link %}href="{{ cert.link }}" class="text-gray-700"{% endif %}>
+              <i class="{{ cert.icon }} text-gray-800 mr-2"></i>{{ cert.label }}
+            </a>
+            <div class="text-gray-500 text-xs font-mono">{{ cert.date }}</div>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
     </div>
-  </footer>
+  </section>
+
+
 </div>

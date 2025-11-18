@@ -2,20 +2,14 @@
 date: 2021-10-22
 tags: experience
 institute: AgBiome
-position: DATA SCIENTIST
+position: DATA SCIENTIST AND ENGINEER
+location: Durham, NC
 begin: 2015
 end: 2021
 notes: [
-  "I led several development cycles to modernize our pesticidal
-  protein discovery platform, and provide data and guidance
-  for prioritization of the resulting proteins in lab assays.",
-  "I led the effort to collect all lab assay data in our
-  AWS platform, ensuring data robustness and enabling analyses.",
-  "I engineered multiple aspects of our AWS data platform, using
-  CloudFormation, ECR, S3, Batch, Glue, Lambda, Athena,
-  Step Functions, etc.",
-  "I developed dashboards using both Plotly Dash and AWS Quicksight
-  to provide data and analyses to scientific and IP teams, delivering
-  multiple products that enabled data discovery and on-demand analysis."
+  "Modernized protein discovery platform, implementing scalable cloud-native Python workflows that identified and guided prioritization of 1000+ candidate proteins.",
+  "Collaborated with web-lab scientists and external software development team to collect assay data in centralized data lake on AWS S3, migrating 2+ years of lab assay data.",
+  "Engineered multiple cloud-native data workflows using CloudFormation, Batch, Lambda, and Step Functions, supporting distributed processing of genomics datasets.",
+  "Built interactive dashboards with Plotly/Dash and QuickSight, delivering data products to scientific teams and enabling data discovery and self-service analytics for scientific and IP teams."
 ]
 ---

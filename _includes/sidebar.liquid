@@ -1,65 +1,66 @@
-<aside class="bg-white mt-4 mb-4">
-  <div class="flex flex-wrap content-around h-full border-l-2 border-blueGrey-200">
-    <div class="flex flex-col ml-2">
-      <h3 class="text-lg text-cyan-900 font-light font-mono">Education</h3>
-      <ul class="font-mono text-blueGrey-900 text-sm my-1">
+<aside class="mt-4 mb-4">
+  <div class="flex flex-col h-full space-y-4">
+    <div class="mb-4">
+      <h3 class="text-base font-bold text-gray-700 mb-2 flex items-center">
+        <i class="fas fa-graduation-cap text-teal-600 mr-2"></i>
+        Education
+      </h3>
+      <ul class="space-y-2">
       {% for educ in education %}
-        <li class="py-1">
-          <div class="font-bold font-sans text-sm text-blueGrey-800">
+        <li>
+          <div class="font-semibold text-sm text-gray-900">
             {{ educ.degree }}
           </div>
-          <div class="font-sans text-sm text-blueGrey-800">
+          <div class="text-sm text-gray-700">
             {{ educ.field }}
           </div>
-          <div class="text-blueGrey-900 text-sm font-light font-sans">
+          <div class="text-gray-600 text-sm">
             {{ educ.institute }}
           </div>
-          <div class="text-blueGrey-600 text-xs font-mono">
+          <div class="text-gray-500 text-xs font-mono mt-1">
             {{ educ.begin }}&mdash;{{ educ.end }}
           </div>
         </li>
       {% endfor %}
       </ul>
     </div>
-    <div class="flex flex-col ml-2">
-      <h3 class="text-lg text-cyan-900 font-light font-mono">Certifications</h3>
-      <ul class="font-mono text-blueGrey-900 text-xs mt-1">
+    <div class="mb-4">
+      <h3 class="text-base font-bold text-gray-700 mb-2 flex items-center">
+        <i class="fas fa-certificate text-teal-600 mr-2"></i>
+        Certifications
+      </h3>
+      <ul class="space-y-1">
       {% for cert in certifications %}
-        <li class="py-1">
-          <a {% if cert.link %}href="{{ cert.link }}" class="hover:underline"{% endif %}>
-            <i class="{{ cert.icon }} pr-1"></i>{{ cert.label }}
+        <li>
+          <a {% if cert.link %}href="{{ cert.link }}" class="text-gray-700"{% endif %}>
+            <i class="{{ cert.icon }} text-teal-600 mr-2"></i>{{ cert.label }}
           </a>
         </li>
       {% endfor %}
       </ul>
     </div>
-    <div class="flex flex-col ml-2">
-      <h3 class="text-lg text-cyan-900 font-light font-mono">Technical Skills</h3>
-      <ul class="font-mono text-blueGrey-900 text-sm mt-l">
+    <div class="mb-4">
+      <h3 class="text-base font-bold text-gray-700 mb-2 flex items-center">
+        <i class="fas fa-code text-teal-600 mr-2"></i>
+        Technical Skills
+      </h3>
+      <div class="flex flex-wrap">
       {% for tech in technologies %}
-        <li class="font-bold border rounded-md border-cyan-600 inline px-1 py-1 leading-8">{{ tech.label }}</li>
+        <span class="skill-tag">{{ tech.label }}</span>
       {% endfor %}
-      </ul>
+      </div>
     </div>
-    <div class="flex flex-col ml-2">
-      <h3 class="text-lg text-cyan-900 font-light font-mono">Links</h3>
-      <ul class="font-mono text-blueGrey-900 text-xs mt-1">
-      {% for link in links %}
-        <li class="py-1">
-          <a href="{{ link.link }}" class="hover:underline">
-            <i class="{{ link.icon }} pr-1"></i>{{ link.label }}
-          </a>
-        </li>
-      {% endfor %}
-      </ul>
-    </div>
-    <div class="flex flex-col ml-2">
-      <h3 class="text-lg text-cyan-900 font-light font-mono">Contact</h3>
-      <ul class="font-mono text-blueGrey-900 text-xs mt-1">
+
+    <div class="mb-4">
+      <h3 class="text-base font-bold text-gray-700 mb-2 flex items-center">
+        <i class="fas fa-envelope text-teal-600 mr-2"></i>
+        Contact
+      </h3>
+      <ul class="space-y-1">
       {% for contact in contacts %}
-        <li class="py-1">
-          <a {% if contact.contact %}href="{{ contact.contact }}{% endif %}" class="hover:underline">
-            <i class="{{ contact.icon }} pr-1"></i>{{ contact.label }}
+        <li>
+          <a {% if contact.contact %}href="{{ contact.contact }}" class="text-gray-700"{% endif %}>
+            <i class="{{ contact.icon }} text-teal-600 mr-2"></i>{{ contact.label }}
           </a>
         </li>
       {% endfor %}

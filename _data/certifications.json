@@ -1,17 +1,26 @@
 [
   {
+    "label": "AWS Data Engineer - Associate",
+    "link": "https://www.credly.com/badges/da744d95-7256-493f-9b49-3131baddc894",
+    "icon": "fab fa-aws fa-fw",
+    "date": "2025-2028"
+  },
+  {
     "label": "AWS Solutions Architect - Associate",
-    "link": "https://www.credly.com/badges/219ff74a-5005-4b56-94aa-67614217b3a0/public_url",
-    "icon": "fab fa-aws fa-fw"
+    "link": "https://www.credly.com/badges/219ff74a-5005-4b56-94aa-67614217b3a0",
+    "icon": "fab fa-aws fa-fw",
+    "date": "2022-2025"
   },
   {
     "label": "AWS Developer - Associate",
-    "link": "https://www.credly.com/badges/117f0140-94bd-472b-a806-0a35ae2c048c/public_url",
-    "icon": "fab fa-aws fa-fw"
+    "link": "https://www.credly.com/badges/117f0140-94bd-472b-a806-0a35ae2c048c",
+    "icon": "fab fa-aws fa-fw",
+    "date": "2021-2024"
   },
   {
     "label": "AWS Cloud Practitioner",
-    "link": "https://www.credly.com/badges/cf55db46-caad-4f4e-b32d-641b4145012d/public_url",
-    "icon": "fab fa-aws fa-fw"
+    "link": "https://www.credly.com/badges/cf55db46-caad-4f4e-b32d-641b4145012d",
+    "icon": "fab fa-aws fa-fw",
+    "date": "2020-2028"
   }
 ]

@@ -1,16 +1,25 @@
-<header class="mt-2">
-  <div class="mx2 mt-3 ml-2 border-l-2 border-cyan-600 flex flex-col">
-    <div class="pb-2 px-4 flex flex-row justify-between items-center">
+<header class="mt-2 mb-4">
+  <div class="flex flex-col">
+    <div class="flex flex-row justify-between items-center">
       <div class="flex flex-col">
         <div>
-          <span class="font-sans text-3xl font-medium text-cyan-900">{{ author.data.author }}</span>
+          <span class="text-4xl font-bold text-gray-900 tracking-tight">{{ author.data.author }}</span>
         </div>
-        <div>
-          <span class="font-sans text-2xl font-light text-blueGrey-800">{{ author.data.title }}</span>
+        <div class="mt-2">
+          <span class="text-lg font-medium text-gray-700">{{ author.data.title }}</span>
         </div>
       </div>
+      <div class="flex flex-col items-end text-sm text-gray-700 leading-tight">
+        {% for contact in contacts %}
+          <div class="mb-1">
+            <a {% if contact.contact %}href="{{ contact.contact }}" class="text-gray-700"{% endif %}>
+              {{ contact.label }}<i class="{{ contact.icon }} text-gray-800 ml-2"></i>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
     </div>
-    <div class="pl-4 text-xs text-blueGrey-700">
+    <div class="mt-3 text-sm text-gray-700 leading-snug">
       {{ author.templateContent }}
     </div>
   </div>

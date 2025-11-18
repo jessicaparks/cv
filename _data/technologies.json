@@ -1,11 +1,7 @@
-[
-  {"label": "AWS"},
-  {"label": "Docker"},
-  {"label": "Git"},
-  {"label": "Jupyter"},
-  {"label": "Plotly/Dash"},
-  {"label": "Python"},
-  {"label": "Slack"},
-  {"label": "Streamlit"},
-  {"label": "SQL"}
-]
+{
+  "Languages": "Python, SQL",
+  "AWS Services": "API Gateway, Athena, Batch, CloudFormation, CloudWatch, DynamoDB, EC2, ECR, EventBridge, Glue, IAM, Kinesis, Lambda, RDS/Aurora, Route 53, S3, Secrets Manager, SNS, SQS, Step Functions, Storage Gateway",
+  "Data Engineering": "Data Modeling, Data Lake, Event-Driven Architecture, ETL, Workflow Orchestration",
+  "Databases": "DynamoDB, S3 Data Lake, Athena, PostgreSQL",
+  "DevOps & Tools": "Docker, GitLab, GitHub, CI/CD, IaC"
+}
